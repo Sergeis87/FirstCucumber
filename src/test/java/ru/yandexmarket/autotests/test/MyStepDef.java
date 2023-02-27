@@ -37,8 +37,18 @@ public class MyStepDef {
         page.findElectronic();
     }
 
+    @And("Задать параметр Производитель {string}")
+    public void задатьПараметрПроизводитель(String manufacturer) {
+        YaMarketPage page = new YaMarketPage();
+        page.findProduct(manufacturer);
+    }
+
+
     @And("DEBUG")
     public void debug() {
         System.out.println("DEBUG");
     }
+
+
+
 }
